@@ -2,6 +2,9 @@
 ## Introduction
 Students tend to take advantage of the online learning paradigm by indulging in short cut tricks to score more in exams. The project basically fosters a new standard of academic integrity by the detection of delinquency and malpractices in online assessments and hence securing the examination procedure of the e-learning paradigm. The project mainly focuses on the eradication of cheating in online examinations using checks like face detection and window checking.
 
+## Working Project
+[![VIDEO OF PROJECT](http://img.youtube.com/vi/6TFENvtDOok/0.jpg)](http://www.youtube.com/watch?v=6TFENvtDOok "FrostHack Project 'Digi-Proctor' Team 'We_Code'")
+
 ## How to Use
 To use the application one must have Python 3.8 or above version installed in their machine.
 
@@ -12,7 +15,7 @@ To use the application one must have Python 3.8 or above version installed in th
 ```bash
 pip install -r requirements.txt
 ```
-4. Since, a databse file is provided in the repository, you can directly run the Django server by the command: 
+4. Since, a database file is provided in the repository, you can directly run the Django server by the command: 
 ```bash
 python3 manage.py runserver
 ```
