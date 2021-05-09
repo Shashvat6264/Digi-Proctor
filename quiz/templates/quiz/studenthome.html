@@ -1,0 +1,42 @@
+{% extends 'quiz/main_template.html' %}
+{% block title %} Title {% endblock %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'quiz/style/homePage.css' %}">
+
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'StudentHome' %}">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Quizzes</a>
+            <ul class="dropdown-menu">
+            {% for quiz in quizzes %}
+                <li><a class="dropdown-item" href="/quiz/all">{{ quiz.quizName }}</a></li>    
+            {% endfor %}
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Grades</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout'%}">Log Out</a>
+        </li>
+    </ul>
+
+
+    <section class="image" id="about">
+    <h1>{{ user.username }}</h1>
+    <section>
+    <p> 
+        ID for the account: {{ user.id }}<br>
+        Email for the account: {{ user.email }}
+    </p>
+</section>
+  </section>
+
+
+
+{% endblock %}

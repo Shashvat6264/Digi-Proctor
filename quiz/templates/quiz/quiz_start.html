@@ -1,0 +1,33 @@
+{% extends 'quiz/main_template.html' %}
+{% block title %} Title {% endblock %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'quiz/style/quizstart.css' %}">
+
+<section class="image" id="about">
+    <h1 style="color: white;">{{ quiz.quizName }}</h1>
+    <h2>Number of questions: {{ numOfQns }}</h2>
+    <button id="next" class="button">Start the quiz</button>
+    <h3>Calibrate the Camera according to your position</h3>
+    <img class="img-responsive" src="{% url 'video_feed' %}">
+</section>
+
+
+<script>
+    var next = document.getElementById("next");
+    next.onclick = () => {
+        window.location.href = "/quiz/{{ quiz.quizID }}/{{ nextqn }}/{{ responseID }}"
+    }
+</script>
+
+{% comment %} <p>
+    <h2>{{ quiz.quizName }}</h2>
+    <p>
+        Number of questions: {{ numOfQns }}
+    </p>
+    <a href="/quiz/{{ quiz.quizID }}/{{ nextqn }}/{{ responseID }}">Start Quiz</a><br>
+    <bold>Calibrate the Camera according to your position</bold><br>
+    <img src="{% url 'video_feed' %}">
+</p> {% endcomment %}
+
+{% endblock %}

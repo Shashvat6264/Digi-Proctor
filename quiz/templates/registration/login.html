@@ -1,0 +1,30 @@
+{% load static %}
+<html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Log In
+        </title>
+        <link rel="stylesheet" type="text/css" href="{% static 'quiz/style/login.css' %}">
+    <body style="background-image: url('https://images.unsplash.com/photo-1579605039737-5dd74cbbaa96?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');">      
+    <div class="login">
+        <div class="login-header">
+            <h1>Login</h1>
+        </div>
+    
+        <div class="login-form">
+        <form method="POST">
+        {% csrf_token %}
+            {{ form.username.errors }}
+            <h3>{{ form.username.label }}:</h3>
+            {{ form.username }}
+            <h3>{{ form.password.label }}:</h3>
+            {{ form.password }}
+            <button class="login-button">Login</button><br>
+        </form>
+            <a href="/quiz/register/" class="sign-up">Sign Up!</a><br>
+            <h6 class="no-access">Can't access your account?</h6>
+        </div>
+    </div>
+</body>
+</html>

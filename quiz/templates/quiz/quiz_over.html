@@ -1,0 +1,14 @@
+{% extends 'quiz/main_template.html' %}
+{% block title %} Title {% endblock %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'quiz/style/quizOver.css' %}">
+
+<section class="image" id="about">
+    <h1 style="color: white;">Phew! 🥳 Congratulations you have succesfully submitted your responses for the quiz🎉</h1>
+    <a href="/quiz/all"><h3>Back to Home Page</h3></a>
+</section>
+
+
+{% endblock %}

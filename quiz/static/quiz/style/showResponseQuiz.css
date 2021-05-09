@@ -1,0 +1,88 @@
+#about {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: left;
+    color: white;
+    margin: 0px 0 20px 0;
+    padding: 35px;
+    /* font-size: larger; */
+}
+
+.nav{
+    background-color: teal;
+    color: white;
+}
+
+.nav-link{
+   color: white;
+   /* text-decoration: royalblue; */
+}
+
+.nav-link:hover{
+    color: yellow;
+}
+
+
+
+.nav-item{
+   
+   display: block;
+   /* padding: 0.8em; */
+width: 10em;
+text-align: center;
+   
+}
+
+  body { 
+    padding-bottom: 50px;
+    /* background-color: #1D1E22; */
+    background-color: #339999;
+  }
+
+  ol {
+    counter-reset: li; /* Initiate a counter */
+    list-style: none; /* Remove default numbering */
+    *list-style: decimal; /* Keep using default numbering for IE6/7 */
+    font: 20px 'trebuchet MS', 'lucida sans';
+    /* padding: 0; */
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  }
+  .rounded-list a{
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    *padding: .4em;
+    margin: 1em 1em 0 0;
+    /* background: #ddd; */
+    color: #444; 
+    /* color: white; */
+    text-decoration: none;
+    border-radius: .3em;
+    transition: all .3s ease-out;
+  }
+
+  .rounded-list a:hover{
+    background: #eee;
+  }
+
+  .rounded-list a:hover:before{
+    transform: rotate(360deg);
+  }
+
+  .rounded-list a:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #87ceeb;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+  }

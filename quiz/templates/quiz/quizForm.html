@@ -1,0 +1,41 @@
+{% extends 'quiz/main_template.html' %}
+{% block title %} Title {% endblock %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'quiz/style/quizForm.css' %}">
+
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{% url 'ProfHome' %}">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Create</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'createQuiz' %}">Quiz</a></li>
+                <li><a class="dropdown-item" href="{% url 'createQuestion' %}">Question</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'showQuiz' %}">Show</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout'%}">Log Out</a>
+        </li>
+    </ul>
+
+
+<section class="image" id="about">
+      <h1>CREATE A {{ formname }}</h1>
+        <form action="" method="post">
+            {% for field in form %}
+            {{ field.errors }}
+            <label for="fname">{{ field.label }}</label><br>
+            {{ field }}<br>
+            {% endfor %}
+            <br>
+            <input class="button" type="submit" value="Submit">
+        </form>
+    </section>
+{% endblock %}

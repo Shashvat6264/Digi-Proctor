@@ -1,0 +1,22 @@
+{% extends 'quiz/main_template.html' %}
+{% block title %} Title {% endblock %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'quiz/style/displayqn.css' %}">
+
+<section class="image" id="about"> 
+    <h1 style="color: white;">{{ question.questionDesc }}</h1>
+    <textarea id="answer" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+    {% if nextQn != None %}
+        <a id="submit" href="/quiz/{{ quiz.quizID }}/{{ nextQn }}/{{ responseID }}"><h3>Next Question </h3></a>
+        <a href="/quiz/over"><h3>End Question</h3></a>
+    {% else %}
+        <a id="submit" href="/quiz/over"><h3>End Question</h3></a>
+    {% endif %}
+    <img class="img-responsive" src="{% url 'video_feed' %}">   
+</section>
+
+<script src="{% static 'quiz/script/qnCntTime.js' %}"></script>
+
+{% endblock %}

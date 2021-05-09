@@ -1,0 +1,37 @@
+{% extends 'quiz/main_template.html' %}
+{% block title %} Title {% endblock %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'quiz/style/allquiz.css' %}">
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{% url 'StudentHome' %}">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Quizzes</a>
+            <ul class="dropdown-menu">
+            {% for quiz in quizzes %}
+                <li><a class="dropdown-item" href="/quiz/{{ quiz.quizID }}">{{ quiz.quizName }}</a></li>    
+            {% endfor %}
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="">Grades</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout'%}">Log Out</a>
+        </li>
+    </ul>
+  
+{% for quiz in quizzes%}
+    <div class="card quizcard" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{ quiz.quizName }}</h5>
+            <p class="card-text">Quiz ID: {{ quiz.quizID }}</p>
+            <a href="/quiz/{{ quiz.quizID }}" class="btn btn-primary">Start Quiz</a>
+        </div>
+    </div>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'quiz/main_template.html' %}
+{% block title %} Title {% endblock %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'quiz/style/showResponseQuiz.css' %}">
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{% url 'ProfHome' %}">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Create</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'createQuiz' %}">Quiz</a></li>
+                <li><a class="dropdown-item" href="{% url 'createQuestion' %}">Question</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="{% url 'showQuiz' %}">Show</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout'%}">Log Out</a>
+        </li>
+    </ul>
+
+
+    <section class="image" id="about">
+        <h1>{{ quiz.quizName }}</h1>
+    </section>
+    <ol class="rounded-list">
+        {% for response in responses %}
+            <li><a href="responses/{{ response.id }}">Response of {{ response.student.username }}</a></li>
+        {% endfor %}
+    <ol>
+
+
+{% endblock %}

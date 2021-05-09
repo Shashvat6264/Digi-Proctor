@@ -1,0 +1,23 @@
+.nav{
+    background-color: teal;
+    color: white;
+}
+
+.nav-link{
+   color: white;
+}
+
+
+
+.nav-item{
+    display: block;
+    width: 10em;
+    text-align: center;
+}
+
+.quizcard{
+   margin: 3rem;
+   float: left;
+}
+
+
