@@ -24,6 +24,13 @@ python3 manage.py migrate
 7. After running the server, go to the URL **"127.0.0.1:8000"** to see the app running.
 8. You can test the app now.
 
+## Reasons to Use
+Reasons to Use Digi-Proctor for examinations:
+1. Remote Supervision and Proctoring
+2. It is highly scalable, very reliable, extremely secure, and provides enhanced productivity
+3. Digiproctor guarantees reliability by incorporating unique features at the student-end and in the back-end.
+4. In proctored tests, the student is authenticated through facial analysis and is continually monitored during the test. Every non-compliant action is logged, and students' Trust Score is reduced.
+
 ## Detailed Features
 Our project aims to prevent students from performing malpractices by keeping a series of checks on the students throughout the course of the quiz. 
 ### **Face Detection**
