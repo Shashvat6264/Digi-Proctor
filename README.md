@@ -37,7 +37,7 @@ Reasons to Use Digi-Proctor for examinations:
 4. In proctored tests, the student is authenticated through facial analysis and is continually monitored during the test. Every non-compliant action is logged, and students' Trust Score is reduced.
 
 ## :scroll:Detailed Features
-Our project aims to prevent students from performing malpractices by keeping a series of checks on the students throughout the course of the quiz. 
+Our project aims to prevent students from performing malpractices by keeping a series of checks on the students throughout the course of the quiz. :zap:![Detailed Document Of the Project!](https://docs.google.com/document/d/15iE3nayH2szOoUU5ZPn-oNTuflI0lRAN7xjgVjxIm2o/edit?usp=sharing)
 ### :woman:**Face Detection**
 The project makes the student feel like sitting in an examination room by giving them an online automated proctor who has his eyes on the student for the entire time. Our system uses face detection techniques to keep tabs on all of the activities of students throughout the exam. In case of detected malpractice, the system reports to the professor with an analysis. 
 ### :mag:**Window Changing**
@@ -57,3 +57,4 @@ It was always said that :star2:Digitalization:star2: is the future, this Pandemi
 :sparkling_heart:Our team has come up with the idea of a dynamic online examination software to uphold academic integrity with a more secure way of assessments. Our project supports the development of original thinking skills and helps students do their best, original work.  
 Some :inbox_tray:suggestions for addition of features in the future includes:  
 :blush:*Face Recognition* to verify identity of student and :microphone:*Audio Recognition* to verify that the student is not talking to other parties.:sparkles:
+
