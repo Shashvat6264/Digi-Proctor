@@ -3,8 +3,8 @@
 Students tend to take advantage of the online learning paradigm by indulging in short cut tricks to score more in exams. The project basically fosters a new standard of academic integrity by the detection of delinquency and malpractices in online assessments and hence securing the examination procedure of the e-learning paradigm. The project mainly focuses on the eradication of cheating in online examinations using checks like face detection and window checking.
 
 ## Working Project
-**A working Video of the Project**
-[![VIDEO OF PROJECT](http://img.youtube.com/vi/6TFENvtDOok/0.jpg)](http://www.youtube.com/watch?v=6TFENvtDOok "FrostHack Project 'Digi-Proctor' Team 'We_Code'")
+**A working Video of the Project**  
+[![VIDEO OF PROJECT](http://img.youtube.com/vi/6TFENvtDOok/0.jpg)](http://www.youtube.com/watch?v=6TFENvtDOok "FrostHack Project 'Digi-Proctor' Team 'We_Code'")  
 The video explains the working of the project as well as all its technicalities. It also gives us a User Experience for both User Types, Professor as well as Teacher.
 
 ## How to Use
